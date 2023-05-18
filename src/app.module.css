@@ -1,0 +1,26 @@
+/*font-family: 'Josefin Sans', sans-serif;*/
+
+.container{
+    min-height: 100vh;
+}
+
+.bgLight {
+    background: top center/ contain no-repeat url("./assets/bg-desktop-light.jpg"), hsla(0, 0%, 98%, 1);
+}
+
+.bgDark {
+    background: top center/ contain no-repeat url("./assets/bg-desktop-dark.jpg"), hsla(235, 21%, 11%, 1);
+}
+
+.bgImage {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.todoContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 720px;
+}
