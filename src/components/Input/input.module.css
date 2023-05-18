@@ -1,0 +1,15 @@
+.input{
+    width: 100%;
+    height: 64px;
+    border-radius: 5px;
+    border: none;
+}
+
+.inputLight{
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 0 35px 50px -15px rgba(194, 195, 214, 0.5);
+}
+.inputDark{
+    background-color: hsl(235, 24%, 19%, 1);
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+}
