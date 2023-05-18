@@ -1,0 +1,31 @@
+.boxContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.boxFilter{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.button{
+    background : none;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.buttonLight{
+    color: hsl(235, 9%, 61%, 1);
+}
+
+.buttonDark{
+    color: hsl(235, 16%, 42%, 1)
+}
