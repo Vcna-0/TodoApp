@@ -1,14 +1,14 @@
 import React, {useContext, useState} from "react";
 import { ThemeContext } from "../../providers/ThemeContext";
 import styles from './input.module.css'
-import { ItemType } from "../../App";
+import { TaskType } from "../../App";
 
 type Props = {
-    listItems:  ItemType[];
-    setListItems: React.Dispatch<React.SetStateAction<ItemType[]>>;
+    listTasks:  TaskType[];
+    setListTasks: React.Dispatch<React.SetStateAction<TaskType[]>>;
 }
 
-export const Input = ({listItems, setListItems}:Props) => {
+export const Input = ({listTasks, setListTasks}:Props) => {
 
     const { theme } = useContext(ThemeContext);
     const inputTheme = theme === 'light' ? styles.inputLight : styles.inputDark;
@@ -17,15 +17,14 @@ export const Input = ({listItems, setListItems}:Props) => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setListItems([...listItems, {id: listItems.length + 1, text: inputValue, completed: false}])
+        setListTasks([...listTasks, {id: listTasks.length + 1, text: inputValue, completed: false}])
         setInputValue('');
     }
-    console.log("items", listItems)
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" value={inputValue} onChange={(event) => setInputValue(event.target.value)} className={`${styles.input} ${inputTheme}`}/>
+                <input className={`${styles.input} ${inputTheme}`} type="text" value={inputValue} onChange={(event) => setInputValue(event.target.value)}/>
             </form>
         </div>
     )

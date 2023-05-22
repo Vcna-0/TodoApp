@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-
+    padding: 24px 20px;
 }
 
 .boxFilter{
@@ -18,8 +18,11 @@
     border: none;
     font-size: 14px;
     font-weight: 700;
-
     cursor: pointer;
+}
+
+.button:hover{
+    color: hsl(220, 98%, 61%, 1);
 }
 
 .buttonLight{
@@ -27,5 +30,15 @@
 }
 
 .buttonDark{
-    color: hsl(235, 16%, 42%, 1)
+    color: hsl(235, 16%, 42%, 1);
+}
+
+.boxContainerLight{
+    color: hsl(235, 9%, 61%, 1);
+    background-color: hsl(0, 0%, 100%, 1);
+}
+
+.boxContainerDark{
+    color: hsl(235, 16%, 42%, 1);
+    background-color: hsl(235, 25%, 19%, 1);
 }

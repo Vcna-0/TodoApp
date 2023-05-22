@@ -2,11 +2,11 @@ import {useContext, useEffect, useState} from 'react';
 import { ThemeContext } from './providers/ThemeContext';
 import { Header } from "./components/Header/Header"
 import { Input } from "./components/Input/Input"
-import { Item } from "./components/Item/Item"
+import { Task } from "./components/Task/Task"
 import { FilterBox} from "./components/FilterBox/FilterBox";
 import styles from './app.module.css'
 
-export type ItemType = {
+export type TaskType = {
     id: number;
     text: string;
     completed: boolean;
@@ -16,9 +16,10 @@ export const App = () => {
 
     const { theme } = useContext(ThemeContext);
     const bgTheme = theme === 'light' ? styles.bgLight : styles.bgDark;
+    const listTaskContainerTheme = theme === 'light' ? styles.listTaskContainerLight : styles.listTaskContainerDark;
 
-    const [listItems, setListItems] = useState<ItemType[]>(() => {
-        const storedItems = JSON.parse(localStorage.getItem('items') ?? 'null');
+    const [listTasks, setListTasks] = useState<TaskType[]>(() => {
+        const storedItems = JSON.parse(localStorage.getItem('tasks') ?? 'null');
         return storedItems ?? [
             { id: 1, text: 'Complete Online JavaScript Course', completed: true },
             { id: 2, text: 'Learn React', completed: false },
@@ -30,25 +31,27 @@ export const App = () => {
         ];
     });
 
-    const [showItems, setShowItems] = useState<ItemType[]>(listItems);
+    const [showTasks, setShowTasks] = useState<TaskType[]>(listTasks);
 
     useEffect(() => {
-        localStorage.setItem('items', JSON.stringify(listItems));
-    }, [listItems]);
+        localStorage.setItem('tasks', JSON.stringify(listTasks));
+    }, [listTasks]);
 
     useEffect(() => {
-        setShowItems(listItems);
-    }, [listItems]);
+        setShowTasks(listTasks);
+    }, [listTasks]);
 
     return (
-        <div className={`${styles.container} ${bgTheme}`}>
+        <div className={`${styles.appContainer} ${bgTheme}`}>
             <div className={styles.todoContainer}>
                 <Header/>
-                <Input listItems={ listItems } setListItems={ setListItems }/>
-                {showItems.map((item) => (
-                    <Item key={ item.id } item={ item } setListItems={ setListItems }/>
-                ))}
-                <FilterBox showItems={ showItems } setShowItems={ setShowItems } listItems={listItems} setListItems={setListItems}/>
+                <Input listTasks={ listTasks } setListTasks={ setListTasks }/>
+                <div className={`${styles.listTaskContainer} ${listTaskContainerTheme}`}>
+                    {showTasks.map((task) => (
+                        <Task key={ task.id } task={ task } listTasks={ listTasks } setListTasks={ setListTasks }/>
+                    ))}
+                    <FilterBox showTasks={ showTasks } setShowTasks={ setShowTasks } listTasks={listTasks} setListTasks={setListTasks}/>
+                </div>
             </div>
         </div>
     )
