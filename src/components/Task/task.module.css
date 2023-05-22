@@ -1,0 +1,50 @@
+.taskContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.buttonRemove{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.inputCheckbox{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+/*test*/
+
+
+/*test fin*/
+
+
+
+.taskLight{
+    background-color: hsl(0, 0%, 100%, 1);
+    border-bottom: solid 1px hsl(236, 32%, 92%, 1);
+    color: hsl(235, 19%, 35%, 1);
+}
+
+.taskDark{
+    background-color: hsl(235, 25%, 19%, 1);
+    border-bottom: solid 1px hsl(235, 14%, 26%, 1);
+    color: hsl(235, 39%, 85%, 1);
+}
+
+.completedTextDark{
+    text-decoration: line-through;
+    color: #4D5067;
+
+}
+
+.completedTextLight{
+    text-decoration: line-through;
+    color: #D1D2DA;
+}
