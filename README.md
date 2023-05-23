@@ -4,7 +4,7 @@ Ma solution au challenge `Todo app` de __frontend mentor__.
 
 [Visiter le site](https://vcna-0.github.io/TodoApp/)
 
-<!-- ![Logo](chemin du logo)  -->
+![Logo](./public/screenshots/Desktop.png)
 
 ## Table des matières
 
