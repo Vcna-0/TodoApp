@@ -41,7 +41,7 @@ Le challenge est de développer une application todo list et de la rendre aussi 
 - Filtrer les tâches complétés/active
 - Effacer toutes les tâches terminées
 - Basculer entre le dark mode et le light mode
-- __Bonus :__ Glisser-déposer pour réorganiser les éléments de la liste
+- __Bonus :__ Drag and drop pour réorganiser les éléments de la liste
 - __Bonus personnel :__ Sauvegarde des tâches dans le localStorage
 
 L'application doit aussi être responsive 
