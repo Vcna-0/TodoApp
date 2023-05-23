@@ -12,6 +12,16 @@ export type TaskType = {
     completed: boolean;
 };
 
+
+// @ts-ignore
+const reorder = (list, startIndex, endIndex) => {
+    const result = Array.from(list);
+    const [removed] = result.splice(startIndex, 1);
+    result.splice(endIndex, 0, removed);
+
+    return result;
+};
+
 export const App = () => {
 
     const { theme } = useContext(ThemeContext);
@@ -41,13 +51,22 @@ export const App = () => {
         setShowTasks(listTasks);
     }, [listTasks]);
 
+    // @ts-ignore
+    const handleDragEnd = ({ destination, source }) => {
+        if (!destination) return;
+        // @ts-ignore
+        // setShowTasks(reorder(showTasks, source.index, destination.index));
+        const updatedTasks = reorder(listTasks, source.index, destination.index);
+        setListTasks(updatedTasks);
+    }
+
     return (
         <div className={`${styles.appContainer} ${bgTheme}`}>
             <div className={styles.todoContainer}>
                 <Header/>
                 <Input listTasks={ listTasks } setListTasks={ setListTasks }/>
                 <div className={`${styles.listTaskContainer} ${listTaskContainerTheme}`}>
-                    <ListTasks listTasks={ listTasks } setListTasks={ setListTasks } showTasks={showTasks}/>
+                    <ListTasks listTasks={ listTasks } setListTasks={ setListTasks } showTasks={showTasks} onDragEnd={handleDragEnd}/>
                     <Filters showTasks={ showTasks } setShowTasks={ setShowTasks } listTasks={listTasks} setListTasks={setListTasks}/>
                 </div>
             </div>

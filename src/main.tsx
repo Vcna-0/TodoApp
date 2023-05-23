@@ -6,9 +6,13 @@ import './reset.css'
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+    // <ThemeProvider>
+    //   <React.StrictMode>
+    //     <App />
+    //   </React.StrictMode>
+    // </ThemeProvider>
+
     <ThemeProvider>
-      <React.StrictMode>
         <App />
-      </React.StrictMode>
     </ThemeProvider>
 )
