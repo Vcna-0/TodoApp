@@ -2,8 +2,8 @@ import {useContext, useEffect, useState} from 'react';
 import { ThemeContext } from './providers/ThemeContext';
 import { Header } from "./components/Header/Header"
 import { Input } from "./components/Input/Input"
-import { Task } from "./components/Task/Task"
-import { Filter } from "./components/Filter/Filter";
+import { ListTasks } from "./components/ListTasks/ListTasks"
+import { Filters } from "./components/Filters/Filters";
 import styles from './app.module.css'
 
 export type TaskType = {
@@ -47,10 +47,8 @@ export const App = () => {
                 <Header/>
                 <Input listTasks={ listTasks } setListTasks={ setListTasks }/>
                 <div className={`${styles.listTaskContainer} ${listTaskContainerTheme}`}>
-                    {showTasks.map((task) => (
-                        <Task key={ task.id } task={ task } listTasks={ listTasks } setListTasks={ setListTasks }/>
-                    ))}
-                    <Filter showTasks={ showTasks } setShowTasks={ setShowTasks } listTasks={listTasks} setListTasks={setListTasks}/>
+                    <ListTasks listTasks={ listTasks } setListTasks={ setListTasks } showTasks={showTasks}/>
+                    <Filters showTasks={ showTasks } setShowTasks={ setShowTasks } listTasks={listTasks} setListTasks={setListTasks}/>
                 </div>
             </div>
         </div>
