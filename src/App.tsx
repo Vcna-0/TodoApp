@@ -3,7 +3,7 @@ import { ThemeContext } from './providers/ThemeContext';
 import { Header } from "./components/Header/Header"
 import { Input } from "./components/Input/Input"
 import { Task } from "./components/Task/Task"
-import { FilterBox} from "./components/FilterBox/FilterBox";
+import { Filter } from "./components/Filter/Filter";
 import styles from './app.module.css'
 
 export type TaskType = {
@@ -50,7 +50,7 @@ export const App = () => {
                     {showTasks.map((task) => (
                         <Task key={ task.id } task={ task } listTasks={ listTasks } setListTasks={ setListTasks }/>
                     ))}
-                    <FilterBox showTasks={ showTasks } setShowTasks={ setShowTasks } listTasks={listTasks} setListTasks={setListTasks}/>
+                    <Filter showTasks={ showTasks } setShowTasks={ setShowTasks } listTasks={listTasks} setListTasks={setListTasks}/>
                 </div>
             </div>
         </div>
