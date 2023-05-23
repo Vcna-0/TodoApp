@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {TaskType} from '../../App';
+import {TaskType} from '../../types';
 import {ThemeContext} from "../../providers/ThemeContext";
 import styles from './task.module.css'
 import CrossIcon from '../../assets/icon-cross.svg';
@@ -28,13 +28,12 @@ export const Task = ({ listTasks, setListTasks, task, index}:Props) => {
     };
 
     const removeTask = () => {
-        console.log(task.id)
         setListTasks(listTasks.filter((it) => it.id !== task.id))
     }
 
     return (
         <Draggable key={task.id} index={index} draggableId={task.id.toString()}>
-            {(provided, snapshot) => (
+            {(provided) => (
                 <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                     <label htmlFor={ task.text } className={`${styles.taskContainer} ${taskTheme}`}>
                         <div className={styles.inputCheckbox}>
@@ -48,6 +47,5 @@ export const Task = ({ listTasks, setListTasks, task, index}:Props) => {
                 </div>
             )}
         </Draggable>
-
     );
 }

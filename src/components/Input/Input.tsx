@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
 import { ThemeContext } from "../../providers/ThemeContext";
 import styles from './input.module.css'
-import { TaskType } from "../../App";
+import { TaskType } from "../../types";
 
 type Props = {
     listTasks:  TaskType[];

@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import { TaskType } from "../../App";
+import { TaskType } from "../../types";
 import styles from './filters.module.css'
 import {ThemeContext} from "../../providers/ThemeContext";
 
