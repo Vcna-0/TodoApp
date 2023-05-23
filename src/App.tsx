@@ -5,6 +5,7 @@ import { Input } from "./components/Input/Input"
 import { ListTasks } from "./components/ListTasks/ListTasks"
 import { Filters } from "./components/Filters/Filters";
 import styles from './app.module.css'
+import tasksData from './tasksData.json';
 
 export type TaskType = {
     id: number;
@@ -12,13 +13,20 @@ export type TaskType = {
     completed: boolean;
 };
 
+type DragEndParams = {
+    destination?: {
+        droppableId: string;
+        index: number;
+    };
+    source: {
+        index: number;
+    };
+};
 
-// @ts-ignore
-const reorder = (list, startIndex, endIndex) => {
+const reorder = (list:TaskType[], startIndex:number, endIndex:number): TaskType[] => {
     const result = Array.from(list);
     const [removed] = result.splice(startIndex, 1);
     result.splice(endIndex, 0, removed);
-
     return result;
 };
 
@@ -30,18 +38,15 @@ export const App = () => {
 
     const [listTasks, setListTasks] = useState<TaskType[]>(() => {
         const storedItems = JSON.parse(localStorage.getItem('tasks') ?? 'null');
-        return storedItems ?? [
-            { id: 1, text: 'Complete Online JavaScript Course', completed: true },
-            { id: 2, text: 'Learn React', completed: false },
-            { id: 3, text: 'Jog around the park 3x', completed: false },
-            { id: 4, text: '10 minutes meditation', completed: false },
-            { id: 5, text: 'Read for 1 hour', completed: false },
-            { id: 6, text: 'Pick up groceries', completed: false },
-            { id: 7, text: 'Complete Todo App on Frontend Mentor', completed: false },
-        ];
+        return storedItems ?? tasksData;
     });
 
     const [showTasks, setShowTasks] = useState<TaskType[]>(listTasks);
+
+    const handleDragEnd = ({ destination, source }: DragEndParams) => {
+        if (!destination) return;
+        setListTasks(reorder(listTasks, source.index, destination.index));
+    }
 
     useEffect(() => {
         localStorage.setItem('tasks', JSON.stringify(listTasks));
@@ -50,15 +55,6 @@ export const App = () => {
     useEffect(() => {
         setShowTasks(listTasks);
     }, [listTasks]);
-
-    // @ts-ignore
-    const handleDragEnd = ({ destination, source }) => {
-        if (!destination) return;
-        // @ts-ignore
-        // setShowTasks(reorder(showTasks, source.index, destination.index));
-        const updatedTasks = reorder(listTasks, source.index, destination.index);
-        setListTasks(updatedTasks);
-    }
 
     return (
         <div className={`${styles.appContainer} ${bgTheme}`}>
