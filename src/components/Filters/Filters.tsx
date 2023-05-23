@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import { TaskType } from "../../App";
-import styles from './filter.module.css'
+import styles from './filters.module.css'
 import {ThemeContext} from "../../providers/ThemeContext";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
     listTasks: TaskType[];
 }
 
-export const Filter = ({showTasks, setShowTasks, listTasks, setListTasks}:Props) => {
+export const Filters = ({showTasks, setShowTasks, listTasks, setListTasks}:Props) => {
 
     const { theme } = useContext(ThemeContext);
     const buttonTheme = theme === 'light' ? styles.buttonLight : styles.buttonDark;
