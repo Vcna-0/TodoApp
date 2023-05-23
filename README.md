@@ -13,7 +13,6 @@ Ma solution au challenge `Todo app` de __frontend mentor__.
   - [Contexte du projet](#contexte-du-projet)
   - [Fonctionnalités encore manquantes](#fonctionnalités-encore-manquantes)
   - [Éléments fournis pour la réalisation du projet](#éléments-fournis-pour-la-réalisation-du-projet)
-  - [Palette de couleur](#palette-de-couleur)
   - [Fonts](#fonts)
 - [Mon processus](#mon-processus)
   - [Outils et technologies utilisés](#outils-et-technologies-utilisés)
@@ -56,11 +55,9 @@ L'application doit aussi être responsive
 
 - Une maquette figma
 
-### Palette de couleur
-
- `#` →
-
 ### Fonts
+
+La police du site est `Josefin Sans`
 
 ## 🔨 Mon processus
 
