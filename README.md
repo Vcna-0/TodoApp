@@ -1,52 +1,116 @@
-# Frontend Mentor - Interactive pricing component solution
+# Frontend Mentor - TODO APP
 
-### Links :link:
+Ma solution au challenge `Todo app` de __frontend mentor__.
 
-- [Live Site URL](https://vcna-0.github.io/TodoApp/)
+[Visiter le site](https://vcna-0.github.io/TodoApp/)
+
+<!-- ![Logo](chemin du logo)  -->
 
 ## Table des matières
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Le projet](#le-projet)
+  - [Installer et executer le projet](#installer-et-executer-le-projet)
+  - [Contexte du projet](#contexte-du-projet)
+  - [Fonctionnalités encore manquantes](#fonctionnalités-encore-manquantes)
+  - [Éléments fournis pour la réalisation du projet](#éléments-fournis-pour-la-réalisation-du-projet)
+  - [Palette de couleur](#palette-de-couleur)
+  - [Fonts](#fonts)
+- [Mon processus](#mon-processus)
+  - [Outils et technologies utilisés](#outils-et-technologies-utilisés)
+  - [Ressources utiles](#ressources-utiles)
+- [Livrables](#livrables)
+  - [Screenshots](#screenshots)
+- [Auteur](#auteur)
 
-## Overview
 
-### The challenge
+## 🚀 Le projet
 
-Your challenge is to build out this todo app and get it looking as close to the design as possible.
-Your users should be able to:
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Add new todos to the list
-- Mark todos as complete
-- Delete todos from the list
-- Filter by all/active/complete todos
-- Clear all completed todos
-- Toggle light and dark mode
-- Bonus: Drag and drop to reorder items on the list
-- Bonus: Build this project as a full-stack application
+### Installer et executer le projet
 
-## My process
+1. Cloner le projet
+2. Exécuter `npm install` à la racine du projet puis `vite dev`
 
-### Built with
+### Contexte du projet
+
+Le challenge est de développer une application todo list et de la rendre aussi proche que possible du design. L'utilisateur doit pouvoir :
+
+- Responsive (desktop, tablet, mobil)
+- Voir les états de survol de tous les éléments interactifs de la page
+- Ajouter de nouvelles tâches à la liste
+- Marquer les tâches comme terminées
+- Supprimer des tâches de la liste
+- Filtrer les tâches complétés/active
+- Effacer toutes les tâches terminées
+- Basculer entre le dark mode et le light mode
+- __Bonus :__ Glisser-déposer pour réorganiser les éléments de la liste
+
+L'application doit aussi être responsive 
+
+### Fonctionnalités encore manquantes
+
+- Le responsive
+- Le style des checkboxs
+- Corrections de quelques bugs
+
+### Éléments fournis pour la réalisation du projet
+
+- Une maquette figma
+
+### Palette de couleur
+
+ `#` →
+
+### Fonts
+
+## 🔨 Mon processus
+
+### Outils et technologies utilisés
 
 - Vite
 - React
 - Typescript
 - React Beautiful Dnd
 - CSS module
+- useContext
 
-### Useful resources
+### Ressources utiles
 
 - [robinwieruch - How to Drag and Drop in React](https://www.robinwieruch.de/react-drag-and-drop/)
 
-## Author
+## 📚 Livrables
+
+### Screenshots
+
+<details>
+  <summary>Desktop</summary>
+  <p align="center">
+    <img src="" alt=""/>
+  </p>
+  <p align="center">
+    <img src="" alt=""/>
+  </p>
+</details>
+
+<details>
+  <summary>Tablette</summary>
+  <p align="center">
+    <img src="" alt=""/>
+  </p>
+  <p align="center">
+    <img src="" alt=""/>
+  </p>
+</details>
+
+<details>
+  <summary>Mobile</summary>
+  <p align="center">
+    <img src="" alt=""/>
+  </p>
+  <p align="center">
+    <img src="" alt=""/>
+  </p>
+</details>
+
+## 👷 Auteur
 
 - [Noëmie C](https://odymonie.netlify.app/)
-- Frontend Mentor - [Vcna-0](https://www.frontendmentor.io/profile/Vcna-0)
