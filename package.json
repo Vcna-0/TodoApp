@@ -2,7 +2,7 @@
   "name": "todoreact",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://vcna-0.github.io/TodoApp/",
+  "homepage": "https://vcna-0.github.io/TodoApp",
   "type": "module",
   "scripts": {
     "dev": "vite",
