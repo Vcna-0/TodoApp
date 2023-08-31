@@ -19,12 +19,6 @@
     flex-direction: row;
     gap: 24px;
 }
-/*test*/
-
-
-/*test fin*/
-
-
 
 .taskLight{
     background-color: hsl(0, 0%, 100%, 1);
@@ -41,10 +35,88 @@
 .completedTextDark{
     text-decoration: line-through;
     color: #4D5067;
-
 }
 
 .completedTextLight{
     text-decoration: line-through;
     color: #D1D2DA;
 }
+
+/* input[type="checkbox"] {
+    appearance: none;
+    background-color: #24263d;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 1px solid #41445f;
+    border-radius: 50px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.50em;
+    height: 0.50em;
+    transform: scale(0);
+    box-shadow: inset 1em 1em #D1D2DA;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+} */
+
+
+
+.checkbox[type="checkbox"] {
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border-radius: 50px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+.checkboxThemeLight[type="checkbox"]{
+    background-color: #FFF;
+    border: 1px solid #979797;
+}
+
+.checkboxThemeDark[type="checkbox"]{
+    background-color: #24263d;
+    border: 1px solid #5f5c41;
+}
+
+.checkbox[type="checkbox"]::before {
+    content: "";
+    width: 0.50em;
+    height: 0.50em;
+    transform: scale(0);
+} 
+
+.checkboxThemeLight[type="checkbox"]::before {
+    box-shadow: inset 1em 1em #25273D;
+}
+
+.checkboxThemeDark[type="checkbox"]::before {
+    box-shadow: inset 1em 1em #D1D2DA;
+}
+
+.checkbox[type="checkbox"]:checked::before {
+    transform: scale(1);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+
+/* .checkboxThemeLight
+.checkboxThemeDark */

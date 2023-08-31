@@ -1,4 +1,4 @@
-.boxContainer{
+/* .boxContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -7,38 +7,103 @@
     padding: 24px 20px;
 }
 
-.boxFilter{
+.boxFilter {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.button{
-    background : none;
+.button {
+    background: none;
     border: none;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
 }
 
-.button:hover{
+.button:hover {
     color: hsl(220, 98%, 61%, 1);
 }
 
-.buttonLight{
+.buttonLight {
     color: hsl(235, 9%, 61%, 1);
 }
 
-.buttonDark{
+.buttonDark {
     color: hsl(235, 16%, 42%, 1);
 }
 
-.boxContainerLight{
+.boxContainerLight {
     color: hsl(235, 9%, 61%, 1);
     background-color: hsl(0, 0%, 100%, 1);
 }
 
-.boxContainerDark{
+.boxContainerDark {
     color: hsl(235, 16%, 42%, 1);
     background-color: hsl(235, 25%, 19%, 1);
+} */
+
+
+/* ======================================================= */
+
+.boxContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.boxClear{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.boxFilter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+}
+
+.button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.activeButton{
+    color: hsl(220, 98%, 61%, 1)!important;
+}
+
+.buttonLight {
+    color: hsl(235, 9%, 61%, 1);
+}
+
+.buttonLight:hover{
+    color: #494C6B;
+}
+
+.buttonDark {
+    color: hsl(235, 16%, 42%, 1);
+}
+
+.buttonDark:hover{  
+    color: #E3E4F1;
+}
+
+.boxContainerLight {
+    color: hsl(235, 9%, 61%, 1);
+    background-color: hsl(0, 0%, 100%, 1);
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+}
+
+.boxContainerDark {
+    color: hsl(235, 16%, 42%, 1);
+    background-color: hsl(235, 25%, 19%, 1);
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
 }

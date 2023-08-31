@@ -17,6 +17,7 @@ export const Task = ({ listTasks, setListTasks, task, index}:Props) => {
     const { theme } = useContext(ThemeContext);
     const taskTheme = theme === 'light' ? styles.taskLight : styles.taskDark;
     const completedTheme = theme === 'light' ? styles.completedTextLight : styles.completedTextDark;
+    const checkboxTheme = theme === 'light' ? styles.checkboxThemeLight : styles.checkboxThemeDark;
 
     const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
@@ -37,7 +38,14 @@ export const Task = ({ listTasks, setListTasks, task, index}:Props) => {
                 <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                     <label htmlFor={ task.text } className={`${styles.taskContainer} ${taskTheme}`}>
                         <div className={styles.inputCheckbox}>
-                            <input type="checkbox" id={ task.text } name={ task.text } checked={ task.completed } onChange={ handleCheckboxChange }/>
+                            <input 
+                                type="checkbox" 
+                                className={`${checkboxTheme} ${styles.checkbox}`} 
+                                id={ task.text } 
+                                name={ task.text } 
+                                checked={ task.completed } 
+                                onChange={ handleCheckboxChange }
+                            />
                             <span className={`${task.completed ? completedTheme : ''} ${styles.checkboxText}`}>{task.text}</span>
                         </div>
                         <button className={styles.buttonRemove} onClick={ removeTask }>
