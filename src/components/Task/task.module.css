@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 24px;
-    padding: 24px 20px;
-    font-size: 18px;
+    padding: 16px 20px;
+    font-size: 12px;
     cursor: pointer;
 }
 
@@ -17,6 +18,7 @@
 .inputCheckbox{
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 24px;
 }
 
@@ -42,46 +44,16 @@
     color: #D1D2DA;
 }
 
-/* input[type="checkbox"] {
-    appearance: none;
-    background-color: #24263d;
-    margin: 0;
-    font: inherit;
-    color: currentColor;
-    width: 1.15em;
-    height: 1.15em;
-    border: 1px solid #41445f;
-    border-radius: 50px;
-    transform: translateY(-0.075em);
-    display: grid;
-    place-content: center;
-}
-
-input[type="checkbox"]::before {
-    content: "";
-    width: 0.50em;
-    height: 0.50em;
-    transform: scale(0);
-    box-shadow: inset 1em 1em #D1D2DA;
-}
-
-input[type="checkbox"]:checked::before {
-    transform: scale(1);
-    transform-origin: bottom left;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-} */
-
-
 
 .checkbox[type="checkbox"] {
     appearance: none;
     margin: 0;
     font: inherit;
     color: currentColor;
-    width: 1.15em;
-    height: 1.15em;
+    width: 20px;
+    height: 20px;
     border-radius: 50px;
-    transform: translateY(-0.075em);
+    transform: translateY(-1.2px);
     display: grid;
     place-content: center;
 }
@@ -98,17 +70,17 @@ input[type="checkbox"]:checked::before {
 
 .checkbox[type="checkbox"]::before {
     content: "";
-    width: 0.50em;
-    height: 0.50em;
+    width: 8px; 
+    height: 8px;
     transform: scale(0);
 } 
 
 .checkboxThemeLight[type="checkbox"]::before {
-    box-shadow: inset 1em 1em #25273D;
+    box-shadow: inset 16px 16px #25273D;
 }
 
 .checkboxThemeDark[type="checkbox"]::before {
-    box-shadow: inset 1em 1em #D1D2DA;
+    box-shadow: inset 16px 16px #D1D2DA;
 }
 
 .checkbox[type="checkbox"]:checked::before {
@@ -118,5 +90,9 @@ input[type="checkbox"]:checked::before {
 }
 
 
-/* .checkboxThemeLight
-.checkboxThemeDark */
+@media screen and (min-width: 720px) {
+    .taskContainer {
+        padding: 24px 20px;
+        font-size: 18px;
+    }
+}
