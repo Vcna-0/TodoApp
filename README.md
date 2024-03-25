@@ -47,7 +47,6 @@ L'application doit aussi être responsive
 
 ### Fonctionnalités encore manquantes
 
-- Le responsive
 - Le style des checkboxs
 - Corrections de quelques bugs
 
