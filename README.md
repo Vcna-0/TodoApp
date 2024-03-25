@@ -33,7 +33,6 @@ Ma solution au challenge `Todo app` de __frontend mentor__.
 
 Le challenge est de développer une application todo list et de la rendre aussi proche que possible du design. L'utilisateur doit pouvoir :
 
-- Responsive (desktop, tablet, mobil)
 - Voir les états de survol de tous les éléments interactifs de la page
 - Ajouter de nouvelles tâches à la liste
 - Marquer les tâches comme terminées
